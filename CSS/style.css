@@ -137,18 +137,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .parallax__clouds {
-  background: url("../img/clouds.jpg") top/cover no-repeat;
+  background: url(../img/clouds.jpg) top/cover no-repeat;
   top: 0;
 }
 
 .parallax__mountains {
-  background: url("../img/mountains.png") top/cover no-repeat;
+  background: url(../img/mountains.png) top/cover no-repeat;
   top: 15%;
   z-index: 2;
 }
 
 .parallax__human {
-  background: url("../img/human.png") top/cover no-repeat;
+  background: url(../img/human.png) top/cover no-repeat;
   top: 45%;
   z-index: 3;
 }

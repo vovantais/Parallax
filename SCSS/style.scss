@@ -53,18 +53,18 @@
 		}
 
 		&__clouds {
-			background: url('../img/clouds.jpg') top / cover no-repeat;
+			background: url(../img/clouds.jpg) top / cover no-repeat;
 			top: 0;
 		}
 
 		&__mountains {
-			background: url('../img/mountains.png') top / cover no-repeat;
+			background: url(../img/mountains.png) top / cover no-repeat;
 			top: 15%;
 			z-index: 2;
 		}
 
 		&__human {
-			background: url('../img/human.png') top / cover no-repeat;
+			background: url(../img/human.png) top / cover no-repeat;
 			top: 45%;
 			z-index: 3;
 		}
