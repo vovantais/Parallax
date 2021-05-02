@@ -1,0 +1,114 @@
+@import "_variable";
+@import "_nullstyle";
+@import "_textmixin";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapper {
+	min-height: 100%;
+}
+.parallax {
+	min-height: 100vh;
+
+		&__body {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&__container {
+			text-transform: uppercase;
+			position: relative;
+			z-index: 2;
+		}
+
+		&__title {
+			@include adaptiv-font(88, 40);
+		}
+
+		&__images {
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			top: -10%;
+			left: -10%;
+			z-index: 1;
+		}
+
+		&__item {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&__clouds, &__mountains, &__human  {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&__clouds {
+			background: url('../img/clouds.jpg') top / cover no-repeat;
+			top: 0;
+		}
+
+		&__mountains {
+			background: url('../img/mountains.png') top / cover no-repeat;
+			top: 15%;
+			z-index: 2;
+		}
+
+		&__human {
+			background: url('../img/human.png') top / cover no-repeat;
+			top: 45%;
+			z-index: 3;
+		}
+}
+.container {
+	max-width: 1000px;
+	margin: 0px auto;
+	padding: 50px 20px;
+}
+
+.content {
+	background: $bodyBGColor;
+	position: relative;
+	z-index: 2;
+
+		&__title {
+			@include adaptiv-font(30, 22);
+			margin: 0px 0px 30px 0px;
+			text-align: center;
+		}
+
+		&__text {
+			@include adaptiv-font(16, 14);
+			line-height: 200%;
+		}
+}
+
+.content ::before {
+	content: '';
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	transform: translate(0px, -100%);
+	z-index: 0;
+	background: linear-gradient(180deg, $contentGradient);
+}
+
+@media (max-aspect-ratio: 3/2) {
+	.parallax {
+		&__human {
+			background-position: 20% top;
+		}
+	}
+}
